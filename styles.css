@@ -1,0 +1,158 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('./images/background-image.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Navigation Bar */
+  .navigation-bar {
+    position: fixed; /* Fixes the navbar to the top */
+    width: 100%;
+    height: 97px;
+    background: linear-gradient(180deg, #212A36 0%, rgba(20, 29, 40, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spreads out content */
+    padding: 0 20px; /* Adds some space to the sides */
+    box-sizing: border-box; /* Includes padding in width calculations */
+    z-index: 10; /* Ensures it's above other content */
+  }
+  
+  /* Forex Radio Logo */
+  .forex-radio {
+    font-family: 'Irish Grover', cursive;
+    font-size: 40px;
+    color: #B3B5CC;
+    white-space: nowrap; /* Prevents text from breaking */
+  }
+  
+  /* Tabs List */
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centers the tabs */
+    padding: 12px 16px;
+    gap: 8px; /* Reduces space between tabs */
+    background: #0B1834;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 999px;
+  }
+  
+  .tab {
+    padding: 8px 12px; /* Reduces internal padding for each tab */
+    text-align: center;
+    background: #0B1834;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .tab:hover {
+    background: rgba(255, 255, 255, 0.2); /* Keeps hover effect intact */
+  }
+  
+  
+  /* Buttons (Login, Register) */
+  .btn {
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 48px;
+    box-shadow: inset 0px 0px 30px rgba(10, 124, 255, 0.8);
+    border: 1px solid #0A7CFF;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #0A7CFF; /* Adds a hover effect */
+  }
+  
+  .frame-14 {
+    display: flex;
+    gap: 20px; /* Space between Login and Register buttons */
+  }
+  
+  /* Search Bar */
+  .search-frame {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background: #021531;
+    border-radius: 34px;
+    width: 100%; /* Takes full width on small screens */
+    max-width: 264px; /* Restricts width on larger screens */
+    gap: 12px;
+    margin: 0 auto; /* Centers the search bar */
+  }
+  
+  .search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    background: #212325;
+    border-radius: 50%;
+  }
+  
+  .search-placeholder {
+    font-family: 'Lufga', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: #909093;
+    flex-grow: 1; /* Ensures the text takes up remaining space */
+  }
+  
+  @media (max-width: 768px) {
+    .search-frame {
+      max-width: 90%; /* Expands to fit most of the screen */
+      padding: 6px 12px; /* Adjusts padding for smaller screens */
+    }
+  
+    .search-placeholder {
+      font-size: 10px; /* Reduces font size on small screens */
+    }
+  
+    .search-icon {
+      width: 32px;
+      height: 32px; /* Shrinks icon slightly for smaller screens */
+    }
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navigation-bar {
+      flex-direction: column; /* Stacks items vertically */
+      height: auto; /* Adjust height for smaller screens */
+      padding: 10px;
+    }
+  
+    .list {
+      max-width: 90%; /* Makes the list adapt to smaller screens */
+      justify-content: center;
+    }
+  
+    .frame-14 {
+      justify-content: center; /* Centers buttons */
+    }
+  }
+  
